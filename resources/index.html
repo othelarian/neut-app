@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="icon" type="image/png" href="icons/appIcon.png">
+    <title>Neutralino - JSCAD linux test</title>
+    <script src="js/neutralino.js"></script>
+    <script src="js/main.js"></script>
+    <style>
+      .hide p { display:none; }
+    </style>
+  </head>
+  <body onload="appInit()">
+    <h1>Neutralino - JSCAD linux test</h1>
+    <button onclick="tryAlert()">Try alert</button>
+    <button onclick="startSystray()">Start systray</button>
+    <div class="hide">
+      <p id="no-sw">ServiceWorker unavailable!</p>
+      <p id="launch-sw">
+        <button onclick="launchSW()">Launch ServiceWorker</button>
+      </p>
+      <p id="sw-launching">Launching SW ...</p>
+      <p id="sw-working">
+        <span>ServiceWorker is currently working</span>
+        <button onclick="callSW()">Call ServiceWorker</button>
+      </p>
+    </div>
+  </body>
+</html>
