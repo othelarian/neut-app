@@ -84,7 +84,7 @@ async function launchSW() {
   toggle('#launch-sw', false)
   toggle('#sw-launching', true)
   try {
-    navigator.serviceWorker.register('js/sw.js')
+    await navigator.serviceWorker.register('sw.js', {scope: '/'})
     console.log('register ok')
     const rdy = await navigator.serviceWorker.ready
     console.log('ready ok')
